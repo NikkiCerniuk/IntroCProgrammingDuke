@@ -1,15 +1,24 @@
-
-int max(int num1, int num2) {
-  if(num1>num2){
-    return num1;
+int printTriangle(int size){
+  int starCount=0;
+  for(int i=0; i<size; i++){
+    for(int j=0; j<=i; j++){
+      printf("*");
+      starCount++;
+    }
+    printf("\n");
   }
-  return num2;
+  return starCount;
 }
-int main(void) {
-  printf("max(42,-69) is %d\n", max(42,-69));
-  printf("max(33,0) is %d\n", max(33,0));
- printf("max(0x123456,123456) is %d\n", max(0x123456,123456));
-  printf("max(0x451215AF, 0x913591AF) is %d\n", max(0x451215AF,0x913591AF));
-  {  return 0;
-  }
+
+int main(void){
+  int numStars;
+  printf("Here is a triangle with height 4\n");
+numStars = printTriangle(4);
+printf("That triangle had %d total stars\n", numStars);
+printf("Here is a triangle with height 7\n");
+numStars = printTriangle(7);
+printf("That triangle had %d total stars\n", numStars);
+ {
+   return 0;
+ }
 }
